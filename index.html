@@ -13,7 +13,7 @@
 
 
     <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
-    <script src="/script.js"></script>
+    <script src="/script.js" defer></script>
 
 
 </head>
@@ -22,24 +22,30 @@
 
 <body>
     <div id="select-box">
-        <form action="results.html" method="get">
-            <select name="locations">
+        <form>
+            <select id="locations">
+                    <option value="">Select a Business</option>
                     <option value="markets">Markets</option>
                     <option value="restaurants">Restaurants</option>
                     <option value="theathers">Theathers</option>
                     <option value="home">Home</option>
                     <option value="work">Work</option>
-                    <option value="coffe">Coffe</option>
+                    <option value="coffee">Coffe</option>
                     <option value="hotel">Hotel</option>
 
                 </select>
-            <input type="select">
+            <button id="search" type="submit">Search</button>
         </form>
 
     </div>
 
 
     <div id="map" style="height:600px ; width:100% ;"></div>
+
+    <button id="find-me">Show my location</button><br />
+    <p id="status"></p>
+    <a id="map-link" target="_blank"></a>
+
 
 
 </body>
